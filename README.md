@@ -1,4 +1,4 @@
-# StopHardcode  
+# NoHardcode  
 ### Python Code to Prevent the Use of Hardcoded Credentials  
 
 ---
