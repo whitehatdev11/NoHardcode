@@ -1,0 +1,12 @@
+# Base image
+FROM dockurr/samba
+
+ENV NAME="Credentials" \
+    USER="samba" \
+    PASS="secret"
+
+# Expose ports, make sure to run -p command to bind ports when using docker run
+EXPOSE 445
+EXPOSE 139
+EXPOSE 135
+VOLUME ["/storage"]
