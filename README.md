@@ -69,6 +69,10 @@ In this demo we will be:
 The authentication portion of this demo to the PiKVM will be using our `generate_aes.py` and `decrypt_creds.py` functions to generate our files using our password.  
 We will then use PowerShell to copy these files onto a remote Samba share.
 
+Samba Share used in the demo is using the Dockerfile.samba dockerfile to build the image then running:
+docker build -f Dockerfile.samba -t samba .
+docker run -d --name samba -p 445:445 -p 139:139 samba
+
 Then, in our `main.py` script, we will:
 
 - Load those credentials into memory  
