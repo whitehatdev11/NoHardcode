@@ -30,7 +30,7 @@ This way, an intruder or hacker would need to compromise both the fileshare **an
 ### 🛠️ Technical Layout  
 The software comes in two pieces:
 
-#### `generate_aes.py`  
+#### `generate_aes`  
 - Has a user input the credentials that will be protected.  
 - The library used for encryption is the infamous hazmat library.  
 - Using this library, we generate the IV, define the necessary padding, and then encrypt our password using **AES-256 in CBC mode**.  
@@ -43,7 +43,7 @@ The software comes in two pieces:
 
 ---
 
-#### `decrypt_creds.py`  
+#### `decrypt_creds`  
 - Exports the function `decrypt_password()` which relies on the function `get_encrypted_password_from_share()`.  
 - Both are defined within the file.
 
